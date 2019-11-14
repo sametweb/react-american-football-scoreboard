@@ -35,7 +35,7 @@ function App() {
           type="number"
           onChange={event => setHomeScore(parseInt(event.target.value))}
           value={homeScore}
-        ></input>{" "}
+        ></input>
       </label>
       <label>
         Away Score:
@@ -43,7 +43,7 @@ function App() {
           type="number"
           onChange={event => setAwayScore(parseInt(event.target.value))}
           value={awayScore}
-        ></input>{" "}
+        ></input>
       </label>
     </div>
   );
