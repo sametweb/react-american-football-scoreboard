@@ -11,9 +11,9 @@ function App() {
   let [awayScore, setAwayScore] = useState(0);
 
   const changeScore = (team, amount) =>
-    team == "home"
+    team === "home"
       ? setHomeScore(homeScore + amount)
-      : team == "away"
+      : team === "away"
       ? setAwayScore(awayScore + amount)
       : null;
 
@@ -29,6 +29,22 @@ function App() {
         awayTouchdown={() => changeScore("away", 7)}
         awayFieldgoal={() => changeScore("away", 3)}
       />
+      <label>
+        Home Score:
+        <input
+          type="number"
+          onChange={event => setHomeScore(parseInt(event.target.value))}
+          value={homeScore}
+        ></input>{" "}
+      </label>
+      <label>
+        Away Score:
+        <input
+          type="number"
+          onChange={event => setAwayScore(parseInt(event.target.value))}
+          value={awayScore}
+        ></input>{" "}
+      </label>
     </div>
   );
 }
